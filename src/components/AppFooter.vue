@@ -15,7 +15,7 @@
         Development
         <a :href="envGithubRepoUrl" class="rw-Footer-link ml-2">
           <icon-github class="ux-icon ux-icon--fw mr-1 mt-[-0.2em]" />
-          <span class>{{ "fabd/diablo2-runewizard" }}</span>
+          <span class>{{ "txandy/herosiege-runewizard" }}</span>
         </a>
       </div>
     </div>
