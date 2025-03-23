@@ -1,7 +1,8 @@
 export const enum ERuneTier {
-  COMMON = 1,
-  SEMIRARE = 2,
-  RARE = 3,
+  LOW = 1,
+  MID = 2,
+  HIGH = 3,
+  ANGELIC = 4
 };
 
 const runes: TRuneDef[] = [

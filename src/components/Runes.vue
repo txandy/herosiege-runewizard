@@ -58,9 +58,10 @@ export default defineComponent({
 
     runesByTier(): TRuneDef[][] {
       const tiers = [
-        this.runes.filter((rune) => rune.tier === ERuneTier.COMMON),
-        this.runes.filter((rune) => rune.tier === ERuneTier.SEMIRARE),
-        this.runes.filter((rune) => rune.tier === ERuneTier.RARE),
+        this.runes.filter((rune) => rune.tier === ERuneTier.LOW),
+        this.runes.filter((rune) => rune.tier === ERuneTier.MID),
+        this.runes.filter((rune) => rune.tier === ERuneTier.HIGH),
+        this.runes.filter((rune) => rune.tier === ERuneTier.ANGELIC),
       ];
 
       // console.log(tiers);
