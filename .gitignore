@@ -5,6 +5,7 @@ node_modules
 .DS_Store
 dist-ssr
 *.local
+.dist
 .idea
 # 
 #  Additional patterns
