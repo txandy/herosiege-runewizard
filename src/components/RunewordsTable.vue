@@ -260,8 +260,7 @@ export default defineComponent({
       let cellHtml = word.ttypes
         .map((type) => {
           const typeHtml = type.replace(" ", "&nbsp;");
-          if (itemTypesData[type].url)
-            return `<a href="${itemTypesData[type].url}" target="_blank">${typeHtml}</a>`;
+
           return typeHtml;
         })
         .join("&nbsp;/&nbsp;");

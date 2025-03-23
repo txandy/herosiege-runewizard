@@ -1,1225 +1,182 @@
 const runewordsDesc: TRunewordMeta = {
-  "Ancient's Pledge": `
-  +50% Enhanced Defense
-  Cold Resist +43%
-  Fire Resist +48%
-  Lightning Resist +48%
-  Poison Resist +48%
-  10% Damage Goes To Mana
-  `,
-
-  Black: `
-  +120% Enhanced Damage
-  40% Chance Of Crushing Blow
-  +200 To Attack Rating
-  Adds 3-14 Cold Damage - Cold Duration 3 Seconds
-  +10 To Vitality
-  15% Increased Attack Speed
-  Knockback
-  Magic Damage Reduced By 2
-  Level 4 Corpse Explosion (12 Charges)
-  `,
-
-  Fury: `
-  +209% Enhanced Damage
-  40% Increased Attack Speed
-  Prevent Monster Heal
-  66% Chance Of Open Wounds
-  33% Deadly Strike
-  Ignore Target's Defense
-  -25% Target Defense
-  20% Bonus To Attack Rating
-  6% Life Stolen Per Hit
-  +5 To Frenzy (Barbarian Only)
-  `,
-
-  "Holy Thunder": `
-  +60% Enhanced Damage
-  -25% Target Defense
-  Adds 5-30 Fire Damage
-  Adds 21-110 Lightning Damage
-  +75 Poison Damage Over 5 Seconds
-  +10 To Maximum Damage
-  Lightning Resistance +60%
-  +5 To Maximum Lightning Resistance
-  +3 To Holy Shock (Paladin Only)
-  Level 7 Chain Lightning (60 Charges)
-  `,
-
-  Honor: `
-  +160% Enhanced Damage
-  +9 To Minimum Damage
-  +9 To Maximum Damage
-  25% Deadly Strike
-  +250 To Attack Rating
-  +1 to All Skills
-  7% Life Stolen Per Hit
-  Replenish Life +10
-  +10 To Strength
-  +1 To Light Radius
-  +2 To Mana After Each Kill
-  `,
-
-  "King's Grace": `
-  +100% Enhanced Damage
-  +100% Damage To Demons
-  +50% Damage To Undead
-  Adds 5-30 Fire Damage
-  Adds 3-14 Cold Damage - 3 Second Duration
-  +150 To Attack Rating
-  +100 To Attack Rating Against Demons
-  +100 To Attack Rating Against Undead
-  7% Life Stolen Per Hit
-  `,
-
-  Leaf: `
-  Adds 5-30 Fire Damage
-  +3 To Fire Skills
-  +3 To Fire Bolt (Sorceress Only)
-  +3 To Inferno (Sorceress Only)
-  +3 To Warmth (Sorceress Only)
-  +2 To Mana After Each Kill
-  + (2 Per Character Level) +2-198 To Defense (Based On Character Level)
-  Cold Resist +33%
-  `,
-
-  Lionheart: `
-  +20% Enhanced Damage
-  Requirements -15%
-  +25 To Strength
-  +10 To Energy
-  +20 To Vitality
-  +15 To Dexterity
-  +50 To Life
-  All Resistances +30
-  `,
-
-  Lore: `
-  +1 To All Skill Levels
-  +10 To Energy
-  +2 To Mana After Each Kill
-  Lightning Resist +30%
-  Damage Reduced By 7
-  +2 To Light Radius
-  `,
-
-  Malice: `
-  +33% Enhanced Damage
-  +9 To Maximum Damage
-  100% Chance Of Open Wounds
-  -25% Target Defense
-  -100 To Monster Defense Per Hit
-  Prevent Monster Heal
-  +50 To Attack Rating
-  Drain Life -5
-  `,
-
-  Melody: `
-  +50% Enhanced Damage
-  +300% Damage To Undead
-  +3 To Bow and Crossbow Skills (Amazon Only)
-  +3 To Critical Strike (Amazon Only)
-  +3 To Dodge (Amazon Only)
-  +3 To Slow Missiles (Amazon Only)
-  20% Increased Attack Speed
-  +10 To Dexterity
-  Knockback
-  `,
-
-  Memory: `
-  +3 to Sorceress Skill Levels
-  33% Faster Cast Rate
-  Increase Maximum Mana 20%
-  +3 Energy Shield (Sorceress Only)
-  +2 Static Field (Sorceress Only)
-  +10 To Energy
-  +10 To Vitality
-  +9 To Minimum Damage
-  -25% Target Defense
-  Magic Damage Reduced By 7
-  +50% Enhanced Defense
-  `,
-
-  Nadir: `
-  +50% Enhanced Defense
-  +10 Defense
-  +30 Defense vs. Missile
-  Level 13 Cloak of Shadows (9 Charges)
-  +2 To Mana After Each Kill
-  +5 To Strength
-  -33% Extra Gold From Monsters
-  -3 To Light Radius
-  `,
-
-  Radiance: `
-  +75% Enhanced Defense
-  +30 Defense Vs. Missile
-  +10 To Energy
-  +10 To Vitality
-  15% Damage Goes To Mana
-  Magic Damage Reduced By 3
-  +33 To Mana
-  Damage Reduced By 7
-  +5 To Light Radius
-  `,
-
-  Rhyme: `
-  20% Increased Chance of Blocking
-  40% Faster Block Rate
-  All Resistances +25
-  Regenerate Mana 15%
-  Cannot Be Frozen
-  50% Extra Gold From Monsters
-  25% Better Chance Of Getting Magic Items
-  `,
-
-  Silence: `
-  200% Enhanced Damage
-  +75% Damage To Undead
-  Requirements -20%
-  20% Increased Attack Speed
-  +50 To Attack Rating Against Undead
-  +2 To All Skills
-  All Resistances +75
-  20% Faster Hit Recovery
-  11% Mana Stolen Per Hit
-  Hit Causes Monster To Flee 25%
-  Hit Blinds Target +33
-  +2 To Mana After Each Kill
-  30% Better Chance Of Getting Magic Items
-  `,
-
-  Smoke: `
-  +75% Enhanced Defense
-  +280 Defense Vs. Missile
-  All Resistances +50
-  20% Faster Hit Recovery
-  Level 6 Weaken (18 Charges)
-  +10 To Energy
-  -1 To Light Radius
-  `,
-
-  Stealth: `
-  Magic Damage Reduced By 3
-  +6 To Dexterity
-  +15 To Maximum Stamina
-  Poison Resist +30%
-  Regenerate Mana 15%
-  25% Faster Run/Walk
-  25% Faster Cast Rate
-  25% Faster Hit Recovery
-  `,
-
-  Steel: `
-  20% Enhanced Damage
-  +3 To Minimum Damage
-  +3 To Maximum Damage
-  +50 To Attack Rating
-  50% Chance Of Open Wounds
-  25% Increased Attack Speed
-  +2 To Mana After Each Kill
-  +1 To Light Radius
-  `,
-
-  Strength: `
-  35% Enhanced Damage
-  25% Chance Of Crushing Blow
-  7% Life Stolen Per Hit
-  +2 To Mana After Each Kill
-  +20 To Strength
-  +10 To Vitality
-  `,
-
-  Venom: `
-  Hit Causes Monster To Flee 25%
-  Prevent Monster Heal
-  Ignore Target's Defense
-  7% Mana Stolen Per Hit
-  Level 15 Poison Explosion (27 Charges)
-  Level 13 Poison Nova (11 Charges)
-  +273 Poison Damage Over 6 seconds
-  `,
-
-  Wealth: `
-  300% Extra Gold From Monsters
-  100% Better Chance Of Getting Magic Items
-  +2 To Mana After Each Kill
-  +10 To Dexterity
-  `,
-
-  White: `
-  Hit Causes Monster To Flee 25%
-  +10 To Vitality
-  +3 To Poison And Bone Skills (Necromancer Only)
-  +3 To Bone Armor (Necromancer Only)
-  +2 To Bone Spear (Necromancer Only)
-  +4 To Skeleton Mastery (Necromancer Only)
-  Magic Damage Reduced By 4
-  20% Faster Cast Rate
-  +13 To Mana
-  `,
-
-  Zephyr: `
-  +33% Enhanced Damage
-  +66 To Attack Rating
-  Adds 1-50 Lightning Damage
-  -25% Target Defense
-  +25 Defense
-  25% Faster Run/Walk
-  25% Increased Attack Speed
-  7% Chance To Cast Level 1 Twister When Struck
-  `,
-
-  Beast: `
-  Level 9 Fanaticism Aura When Equipped
-  +40% Increased Attack Speed
-  +240-270% Enhanced Damage (varies)
-  20% Chance of Crushing Blow
-  25% Chance of Open Wounds
-  +3 To Werebear
-  +3 To Lycanthropy
-  Prevent Monster Heal
-  +25-40 To Strength (varies)
-  +10 To Energy
-  +2 To Mana After Each Kill
-  Level 13 Summon Grizzly (5 Charges)
-  `,
-
-  Bramble: `
-  Level 15-21 Thorns Aura When Equipped (varies)
-  +50% Faster Hit Recovery
-  +25-50% To Poison Skill Damage (varies)
-  +300 Defense
-  Increase Maximum Mana 5%
-  Regenerate Mana 15%
-  +5% To Maximum Cold Resist
-  Fire Resist +30%
-  Poison Resist +100%
-  +13 Life After Each Kill
-  Level 13 Spirit of Barbs (33 Charges)
-  `,
-
-  "Breath of the Dying": `
-  50% Chance To Cast Level 20 Poison Nova When You Kill An Enemy
-  Indestructible
-  +60% Increased Attack Speed
-  +350-400% Enhanced Damage (varies)
-  +200% Damage To Undead
-  -25% Target Defense
-  +50 To Attack Rating
-  +50 To Attack Rating Against Undead
-  7% Mana Stolen Per Hit
-  12-15% Life Stolen Per Hit (varies)
-  Prevent Monster Heal
-<U>+30 To All Attributes</U>
-  +1 To Light Radius
-  Requirements -20%
-  `,
-
-  "Call to Arms": `
-  +1 To All Skills
-  +40% Increased Attack Speed
-  +250-290% Enhanced Damage (varies)
-  Adds 5-30 Fire Damage
-  7% Life Stolen Per Hit
-  +2-6 To Battle Command (varies)*
-  +1-6 To Battle Orders (varies)*
-  +1-4 To Battle Cry (varies)*
-  Prevent Monster Heal
-  Replenish Life +12
-  30% Better Chance of Getting Magic Items
-  `,
-
-  Chaos: `
-  9% Chance To Cast Level 11 Frozen Orb On Striking
-  11% Chance To Cast Level 9 Charged Bolt On Striking
-  +35% Increased Attack Speed
-  +290-340% Enhanced Damage (varies)
-  Adds 216-471 Magic Damage
-  25% Chance of Open Wounds
-  +1 To Whirlwind
-  +10 To Strength
-  +15 Life After Each Demon Kill
-  `,
-
-  "Chains of Honor": `
-  +2 To All Skills
-  +200% Damage To Demons
-  +100% Damage To Undead
-  8% Life Stolen Per Hit
-  +70% Enhanced Defense
-  +20 To Strength
-  Replenish Life +7
-  All Resistances +65
-  Damage Reduced By 8%
-  25% Better Chance of Getting Magic Items
-  `,
-
-  "Crescent Moon": `
-  10% Chance To Cast Level 17 Chain Lightning On Striking
-  7% Chance To Cast Level 13 Static Field On Striking
-  +20% Increased Attack Speed
-  +180-220% Enhanced Damage (varies)
-  Ignore Target's Defense
-  -35% To Enemy Lightning Resistance
-  25% Chance of Open Wounds
-  +9-11 Magic Absorb (varies)
-  +2 To Mana After Each Kill
-  Level 18 Summon Spirit Wolf (30 Charges)
-  `,
-
-  Delirium: `
-  1% Chance To Cast Level 50 Delirium* (morph) When Struck
-  6% Chance To Cast Level 14 Mind Blast When Struck
-  14% Chance To Cast Level 13 Terror When Struck
-  11% Chance To Cast Level 18 Confuse On Striking
-  +2 To All Skills
-  +261 Defense
-  +10 To Vitality
-  50% Extra Gold From Monsters
-  25% Better Chance of Getting Magic Items
-  Level 17 Attract (60 Charges)
-  `,
-
-  Doom: `
-  5% Chance To Cast Level 18 Volcano On Striking
-  Level 12 Holy Freeze Aura When Equipped
-  +2 To All Skills
-  +45% Increased Attack Speed
-  +330-370% Enhanced Damage (varies)
-  -(40-60)% To Enemy Cold Resistance (varies)
-  20% Deadly Strike
-  25% Chance of Open Wounds
-  Prevent Monster Heal
-  Freezes Target +3
-  Requirements -20%
-  `,
-
-  Duress: `
-  +40% Faster Hit Recovery
-  +10-20% Enhanced Damage (varies)
-  Adds 37-133 Cold Damage 2 sec. Duration (Normal)
-  15% Chance of Crushing Blow
-  33% Chance of Open Wounds
-  +150-200% Enhanced Defense (varies)
-  -20% Slower Stamina Drain
-  Cold Resist +45%
-  Lightning Resist +15%
-  Fire Resist +15%
-  Poison Resist +15%
-  `,
-
-  Enigma: `
-  +2 To All Skills
-  +45% Faster Run/Walk
-  +1 To Teleport
-  +750-775 Defense (varies)
-  + (0.75 Per Character Level) +0-74 To Strength (Based On Character Level)
-  Increase Maximum Life 5%
-  Damage Reduced By 8%
-  +14 Life After Each Kill
-  15% Damage Taken Goes To Mana
-  + (1 Per Character Level) +1-99% Better Chance of Getting Magic Items (Based On Character Level)
-  `,
-
-  Eternity: `
-  Indestructible
-  +260-310% Enhanced Damage (varies)
-  +9 To Minimum Damage
-  7% Life Stolen Per Hit
-  20% Chance of Crushing Blow
-  Hit Blinds Target
-  Slows Target By 33%
-  Regenerate Mana 16%
-  Replenish Life +16
-  Cannot Be Frozen
-  30% Better Chance Of Getting Magic Items
-  Level 8 Revive (88 Charges)
-  `,
-
-  Exile: `
-  15% Chance To Cast Level 5 Life Tap On Striking
-  Level 13-16 Defiance Aura When Equipped (varies)
-  +2 To Offensive Auras (Paladin Only)
-  +30% Faster Block Rate
-  Freezes Target
-  +220-260% Enhanced Defense (varies)
-  Replenish Life +7
-  +5% To Maximum Cold Resist
-  +5% To Maximum Fire Resist
-  25% Better Chance Of Getting Magic Items
-  Repairs 1 Durability in 4 Seconds
-  `,
-
-  Famine: `
-  +30% Increased Attack Speed
-  +320-370% Enhanced Damage (varies)
-  Ignore Target's Defense
-  Adds 180-200 Magic Damage
-  Adds 50-200 Fire Damage
-  Adds 51-250 Lightning Damage
-  Adds 50-200 Cold Damage
-  12% Life Stolen Per Hit
-  Prevent Monster Heal
-  +10 To Strength
-  `,
-
-  Gloom: `
-  15% Chance To Cast Level 3 Dim Vision When Struck
-  +10% Faster Hit Recovery
-  +200-260% Enhanced Defense (varies)
-  +10 To Strength
-  All Resistances +45
-  Half Freeze Duration
-  5% Damage Taken Goes To Mana
-  -3 To Light Radius
-  `,
-
-  "Hand of Justice": `
-  100% Chance To Cast Level 36 Blaze When You Level-Up
-  100% Chance To Cast Level 48 Meteor When You Die
-  Level 16 Holy Fire Aura When Equipped
-  +33% Increased Attack Speed
-  +280-330% Enhanced Damage (varies)
-  Ignore Target's Defense
-  7% Life Stolen Per Hit
-  -20% To Enemy Fire Resistance
-  20% Deadly Strike
-  Hit Blinds Target
-  Freezes Target +3
-  `,
-
-  "Heart of the Oak": `
-  +3 To All Skills
-  +40% Faster Cast Rate
-  +75% Damage To Demons
-  +100 To Attack Rating Against Demons
-  Adds 3-14 Cold Damage, 3 sec. Duration (Normal)
-  7% Mana Stolen Per Hit
-  +10 To Dexterity
-  Replenish Life +20
-  Increase Maximum Mana 15%
-  All Resistances +30-40 (varies)
-  Level 4 Oak Sage (25 Charges)
-  Level 14 Raven (60 Charges)
-  `,
-
-  Kingslayer: `
-  +30% Increased Attack Speed
-  +230-270% Enhanced Damage (varies)
-  -25% Target Defense
-  20% Bonus To Attack Rating
-  33% Chance of Crushing Blow
-  50% Chance of Open Wounds
-  +1 To Vengeance
-  Prevent Monster Heal
-  +10 To Strength
-  40% Extra Gold From Monsters
-  `,
-
-  Passion: `
-  +25% Increased Attack Speed
-  +160-210% Enhanced Damage (varies)
-  50-80% Bonus To Attack Rating (varies)
-  +75% Damage To Undead
-  +50 To Attack Rating Against Undead
-  Adds 1-50 Lightning Damage
-  +1 To Berserk
-  +1 To Zeal
-  Hit Blinds Target +10
-  Hit Causes Monster To Flee 25%
-  75% Extra Gold From Monsters
-  Level 3 Heart of Wolverine (12 Charges)
-  `,
-
-  Prudence: `
-  +25% Faster Hit Recovery
-  +140-170% Enhanced Defense (varies)
-  All Resistances +25-35 (varies)
-  Damage Reduced by 3
-  Magic Damage Reduced by 17
-  +2 To Mana After Each Kill
-  +1 To Light Radius
-  Repairs Durability 1 In 4 Seconds
-  `,
-
-  Sanctuary: `
-  +20% Faster Hit Recovery
-  +20% Faster Block Rate
-  20% Increased Chance of Blocking
-  +130-160% Enhanced Defense (varies)
-  +250 Defense vs. Missile
-  +20 To Dexterity
-  All Resistances +50-70 (varies)
-  Magic Damage Reduced By 7
-  Level 12 Slow Missiles (60 Charges)
-  `,
-
-  Splendor: `
-  +1 To All Skills
-  +10% Faster Cast Rate
-  +20% Faster Block Rate
-  +60-100% Enhanced Defense (varies)
-  +10 To Energy
-  Regenerate Mana 15%
-  50% Extra Gold From Monsters
-  20% Better Chance of Getting Magic Items
-  +3 To Light Radius
-  `,
-
-  Stone: `
-  +60% Faster Hit Recovery
-  +250-290% Enhanced Defense (varies)
-  +300 Defense Vs. Missile
-  +16 To Strength
-  +16 To Vitality
-  +10 To Energy
-  All Resistances +15
-  Level 16 Molten Boulder (80 Charges)
-  Level 16 Clay Golem (16 Charges)
-  `,
-
-  Wind: `
-  10% Chance To Cast Level 9 Tornado On Striking
-  +20% Faster Run/Walk
-  +40% Increased Attack Speed
-  +15% Faster Hit Recovery
-  +120-160% Enhanced Damage (varies)
-  -50% Target Defense
-  +50 To Attack Rating
-  Hit Blinds Target
-  +1 To Light Radius
-  Level 13 Twister (127 Charges)
-  `,
-
-  Brand: `
-  35% Chance To Cast Level 14 Amplify Damage When Struck
-  100% Chance To Cast Level 18 Bone Spear On Striking
-  +260-340% Enhanced Damage (varies)
-  Ignore Target's Defense
-  20% Bonus to Attack Rating
-  +280-330% Damage To Demons (varies)
-
-  20% Deadly Strike
-  Prevent Monster Heal
-  Knockback
-  Fires Explosive Arrows or Bolts (15)
-  `,
-
-  Death: `
-  100% Chance To Cast Level 44 Chain Lightning When You Die
-  25% Chance To Cast Level 18 Glacial Spike On Attack
-  Indestructible
-  +300-385% Enhanced Damage (varies)*
-  20% Bonus To Attack Rating
-  +50 To Attack Rating
-  Adds 1-50 Lightning Damage
-  7% Mana Stolen Per Hit
-  50% Chance of Crushing Blow
-  +(0.5 per Character Level) 0.5-49.5% Deadly Strike (Based on Character Level)
-  +1 To Light Radius
-  Level 22 Blood Golem  (15 Charges)
-  Requirements -20%
-  `,
-
-  Destruction: `
-  23% Chance To Cast Level 12 Volcano On Striking
-  5% Chance To Cast Level 23 Molten Boulder On Striking
-  100% Chance To Cast level 45 Meteor When You Die
-  15% Chance To Cast Level 22 Nova On Attack
-  +350% Enhanced Damage
-  Ignore Target's Defense
-  Adds 100-180 Magic Damage
-  7% Mana Stolen Per Hit
-  20% Chance Of Crushing Blow
-  20% Deadly Strike
-  Prevent Monster Heal
-  +10 To Dexterity
-  `,
-
-  Dragon: `
-  20% Chance to Cast Level 18 Venom When Struck
-  12% Chance To Cast Level 15 Hydra On Striking
-  Level 14 Holy Fire Aura When Equipped
-  +360 Defense
-  +230 Defense Vs. Missile
-  +3-5 To All Attributes (varies)
-  +0.375-37.125 To Strength (Based on Character Level)
-  Increase Maximum Mana 5% (Armor Only)
-  +50 To Mana (Shields Only)
-  +5% To Maximum Lightning Resist
-  Damage Reduced by 7
-  `,
-
-  Dream: `
-  10% Chance To Cast Level 15 Confuse When Struck
-  Level 15 Holy Shock Aura When Equipped
-  +20-30% Faster Hit Recovery (varies)
-  +30% Enhanced Defense
-  +150-220 Defense (varies)
-  +10 To Vitality
-  Increase Maximum Life 5% (Helms Only)
-  +50 To Life (Shields Only)
-  +0.625-61.875 To Mana (Based On Character Level)
-  All Resistances +5-20 (varies)
-  12-25% Better Chance of Getting Magic Items (varies)
-  `,
-
-  Edge: `
-  Level 15 Thorns Aura When Equipped
-  +35% Increased Attack Speed
-  +320-380% Damage To Demons (varies)
-  +280% Damage To Undead
-  +75 Poison Damage Over 5 Seconds
-  7% Life Stolen Per Hit
-  Prevent Monster Heal
-  +5-10 To All Attributes (varies)
-  +2 To Mana After Each Kill
-  Reduces All Vendor Prices 15%!!!
-  `,
-
-  Faith: `
-  Level 12-15 Fanaticism Aura When Equipped (varies)
-  +1-2 To All Skills (varies)
-  +330% Enhanced Damage
-  Ignore Target's Defense
-  300% Bonus To Attack Rating
-  +75% Damage To Undead
-  +50 To Attack Rating Against Undead
-  +120 Fire Damage
-  All Resistances +15
-  10% Reanimate As: Returned
-  75% Extra Gold From Monsters
-  `,
-
-  Fortitude: `
-  #### Weapons
-  20% Chance To Cast Level 15 Chilling Armor when Struck
-  +25% Faster Cast Rate
-  +300% Enhanced Damage
-  +9 To Minimum Damage
-  +50 To Attack Rating
-  20% Deadly Strike
-  Hit Causes Monster To Flee 25%
-  +200% Enhanced Defense
-  +X To Life (Based on Character Level)*
-  All Resistances +25-30 (varies)
-  12% Damage Taken Goes To Mana
-  +1 To Light Radius
-
-  #### Body Armor
-  20% Chance To Cast Level 15 Chilling Armor when Struck
-  +25% Faster Cast Rate
-  +300% Enhanced Damage
-  +200% Enhanced Defense
-  +15 Defense
-  +X To Life (Based on Character Level)*
-  Replenish Life +7
-  +5% To Maximum Lightning Resist
-  All Resistances +25-30 (varies)
-  Damage Reduced By 7
-  12% Damage Taken Goes To Mana
-  +1 To Light Radius
-  `,
-
-  Grief: `
-  35% Chance To Cast Level 15 Venom On Striking
-  +30-40% Increased Attack Speed (varies)
-  Damage +340-400 (varies)
-  Ignore Target's Defense
-  -25% Target Defense
-  +(1.875 per character level) 1.875-185.625% Damage To Demons (Based on Character Level) 
-  Adds 5-30 Fire Damage
-  -20-25% To Enemy Poison Resistance (varies)
-  20% Deadly Strike
-  Prevent Monster Heal
-  +2 To Mana After Each Kill
-  +10-15 Life After Each Kill (varies)
-  `,
-
-  Harmony: `
-  Level 10 Vigor Aura When Equipped
-  +200-275% Enhanced Damage (varies)
-  +9 To Minimum Damage
-  +9 To Maximum Damage
-  Adds 55-160 Lightning Damage
-  Adds 55-160 Fire Damage
-  Adds 55-160 Cold Damage
-  +2-6 To Valkyrie (varies)
-  +10 To Dexterity
-  Regenerate Mana 20%
-  +2 To Mana After Each Kill
-  +2 To Light Radius
-  Level 20 Revive (25 Charges)
-  `,
-
-  Ice: `
-  100% Chance To Cast Level 40 Blizzard When You Level-up
-  25% Chance To Cast Level 22 Frost Nova On Striking
-  Level 18 Holy Freeze Aura When Equipped
-  +20% Increased Attack Speed
-  +140-210% Enhanced Damage (varies)
-  Ignore Target's Defense
-  +25-30% To Cold Skill Damage (varies)
-  -20% To Enemy Cold Resistance
-  7% Life Stolen Per Hit
-  20% Deadly Strike
-  3.125-309.375 Extra Gold From Monsters (Based on Character Level)
-  `,
-
-  Infinity: `
-  50% Chance To Cast Level 20 Chain Lightning When You Kill An Enemy
-  Level 12 Conviction Aura When Equipped
-  +35% Faster Run/Walk
-  +255-325% Enhanced Damage (varies)
-  -(45-55)% To Enemy Lightning Resistance (varies)
-  40% Chance of Crushing Blow
-  Prevent Monster Heal
-  0.5-49.5 To Vitality (Based on Character Level)
-  30% Better Chance of Getting Magic Items
-  Level 21 Cyclone Armor (30 Charges)
-  `,
-
-  Insight: `
-  Level 12-17 Meditation Aura When Equipped (varies)
-  +35% Faster Cast Rate
-  +200-260% Enhanced Damage (varies)
-  +9 To Minimum Damage
-  180-250% Bonus to Attack Rating (varies)
-  Adds 5-30 Fire Damage
-  +75 Poison Damage Over 5 Seconds
-  +1-6 To Critical Strike (varies)
-  +5 To All Attributes
-  +2 To Mana After Each Kill
-  23% Better Chance of Getting Magic Items
-  `,
-
-  "Last Wish": `
-  6% Chance To Cast Level 11 Fade When Struck
-  10% Chance To Cast Level 18 Life Tap On Striking
-  20% Chance To Cast Level 20 Charged Bolt On Attack
-  Level 17 Might Aura When Equipped
-  +330-375% Enhanced Damage (varies)
-  Ignore Target's Defense
-  60-70% Chance of Crushing Blow (varies)
-  Prevent Monster Heal
-  Hit Blinds Target
-  +(0.5 per character level) 0.5-49.5% Chance of Getting Magic Items (Based on Character Level) 
-  `,
-
-  Lawbringer: `
-  20% Chance To Cast Level 15 Decrepify On Striking
-  Level 16-18 Sanctuary Aura When Equipped (varies)
-  -50% Target Defense
-  Adds 150-210 Fire Damage
-  Adds 130-180 Cold Damage
-  7% Life Stolen Per Hit
-  Slain Monsters Rest In Peace
-  +200-250 Defense Vs. Missile (varies)
-  +10 To Dexterity
-  75% Extra Gold From Monsters
-  `,
-
-  Oath: `
-  30% Chance To Cast Level 20 Bone Spirit On Striking
-  Indestructible
-  +50% Increased Attack Speed
-  +210-340% Enhanced Damage (varies)
-  +75% Damage To Demons
-  +100 To Attack Rating Against Demons
-  Prevent Monster Heal
-  +10 To Energy
-  +10-15 Magic Absorb (varies)
-  Level 16 Heart Of Wolverine (20 Charges)
-  Level 17 Iron Golem (14 Charges)
-  `,
-
-  Obedience: `
-  30% Chance To Cast Level 21 Enchant When You Kill An Enemy
-  40% Faster Hit Recovery
-  +370% Enhanced Damage
-  -25% Target Defense
-  Adds 3-14 Cold Damage 3 Second Duration (Normal)
-  -25% To Enemy Fire Resistance
-  40% Chance of Crushing Blow
-  +200-300 Defense (varies)
-  +10 To Strength
-  +10 To Dexterity
-  All Resistances +20-30 (varies)
-  Requirements -20%
-  `,
-
-  Phoenix: `
-  #### Weapons
-  100% Chance To Cast level 40 Blaze When You Level-up
-  40% Chance To Cast Level 22 Firestorm On Striking
-  Level 10-15 Redemption Aura When Equipped (varies)
-  +350-400% Enhanced Damage (varies)
-  Ignores Target's Defense
-  14% Mana Stolen Per Hit
-  -28% To Enemy Fire Resistance
-  20% Deadly Strike
-  +350-400 Defense Vs. Missile (varies)
-  +15-21 Fire Absorb (varies)
-
-  #### Shields
-  100% Chance To Cast level 40 Blaze When You Level-up
-  40% Chance To Cast Level 22 Firestorm On Striking
-  Level 10-15 Redemption Aura When Equipped (varies)
-  +350-400 Defense Vs. Missile (varies)
-  +350-400% Enhanced Damage (varies)
-  -28% To Enemy Fire Resistance
-  +50 To Life
-  +5% To Maximum Lightning Resist
-  +10% To Maximum Fire Resist
-  +15-21 Fire Absorb (varies)
-  `,
-
-  Pride: `
-  25% Chance To Cast Level 17 Fire Wall When Struck
-  Level 16-20 Concentration Aura When Equipped (varies)
-  260-300% Bonus To Attack Rating (varies)
-  +1-99% Damage To Demons (Based on Character Level)
-  Adds 50-280 Lightning Damage
-  20% Deadly Strike
-  Hit Blinds Target
-  Freezes Target +3
-  +10 To Vitality
-  Replenish Life +8
-  1.875-185.625% Extra Gold From Monsters (Based on Character Level)
-  `,
-
-  Rift: `
-  20% Chance To Cast Level 16 Tornado On Striking
-  16% Chance To Cast Level 21 Frozen Orb On Attack
-  20% Bonus To Attack Rating
-  Adds 160-250 Magic Damage
-  Adds 60-180 Fire Damage
-  +5-10 To All Stats (varies)
-  +10 To Dexterity
-  38% Damage Taken Goes To Mana
-  75% Extra Gold From Monsters
-  Level 15 Iron Maiden (40 Charges)
-  Requirements -20%
-  `,
-
-  Spirit: `
-  #### Swords
-  +2 To All Skills
-  +25-35% Faster Cast Rate (varies)
-  +55% Faster Hit Recovery
-  Adds 1-50 Lightning Damage
-  Adds 3-14 Cold Damage 3 Second Duration (Normal)
-  +75 Poison Damage Over 5 Seconds
-  7% Life Stolen Per Hit
-  +250 Defense Vs. Missile
-  +22 To Vitality
-  +89-112 To Mana (varies)
-  +3-8 Magic Absorb (varies)
-
-  #### Shields
-  +2 To All Skills
-  +25-35% Faster Cast Rate (varies)
-  +55% Faster Hit Recovery
-  +250 Defense Vs. Missile
-  +22 To Vitality
-  +89-112 To Mana (varies)
-  Cold Resist +35%
-  Lightning Resist +35%
-  Poison Resist +35%
-  +3-8 Magic Absorb (varies)
-  Attacker Takes Damage of 14
-  `,
-
-  "Voice of Reason": `
-  15% Chance To Cast Level 13 Frozen Orb On Striking
-  18% Chance To Cast Level 20 Ice Blast On Striking
-  +50 To Attack Rating
-  +220-350% Damage To Demons
-  +355-375% Damage To Undead (varies)
-  +50 To Attack Rating Against Undead
-  Adds 100-220 Cold Damage
-  -24% To Enemy Cold Resistance
-  +10 To Dexterity
-  Cannot Be Frozen
-  75% Extra Gold From Monsters
-  +1 To Light Radius
-  `,
-
-  Wrath: `
-  30% Chance To Cast Level 1 Decrepify On Striking
-  5% Chance To Cast Level 10 Life Tap On Striking
-  +375% Damage To Demons
-  +100 To Attack Rating Against Demons
-  +250-300% Damage To Undead (varies)
-  Adds 85-120 Magic Damage
-  Adds 41-240 Lightning Damage
-  20% Chance of Crushing Blow
-  Prevent Monster Heal
-  +10 To Energy
-  Cannot Be Frozen
-  `,
-
-  Bone: `
-  15% Chance To Cast level 10 Bone Armor When Struck
-  15% Chance To Cast level 10 Bone Spear On Striking
-  +2 To Necromancer Skill Levels
-  +100-150 To Mana (varies)
-  All Resistances +30
-  Damage Reduced By 7
-  `,
-
-  Enlightenment: `
-  5% Chance To Cast Level 15 Blaze When Struck
-  5% Chance To Cast level 15 Fire Ball On Striking
-  +2 To Sorceress Skill Levels
-  +1 To Warmth
-  +30% Enhanced Defense
-  Fire Resist +30%
-  Damage Reduced By 7
-  `,
-
-  Myth: `
-  3% Chance To Cast Level 1 Howl When Struck
-  10% Chance To Cast Level 1 Taunt On Striking
-  +2 To Barbarian Skill Levels
-  +30 Defense Vs. Missile
-  Replenish Life +10
-  Attacker Takes Damage of 14
-  Requirements -15%
-  `,
-
-  Peace: `
-  4% Chance To Cast Level 5 Slow Missiles When Struck
-  2% Chance To Cast level 15 Valkyrie On Striking
-  +2 To Amazon Skill Levels
-  +20% Faster Hit Recovery
-  +2 To Critical Strike
-  Cold Resist +30%
-  Attacker Takes Damage of 14
-  `,
-
-  Principle: `
-  100% Chance To Cast Level 5 Holy Bolt On Striking
-  +2 To Paladin Skill Levels
-  15% Slower Stamina Drain
-  +5% To Maximum Poison Resist
-  Fire Resist +30%
-  `,
-
-  Rain: `
-  5% Chance To Cast Level 15 Cyclone Armor When Struck
-  5% Chance To Cast Level 15 Twister On Striking
-  +2 To Druid Skills
-  +100-150 To Mana (varies)
-  Lightning Resist +30%
-  Magic Damage Reduced By 7
-  15% Damage Taken Goes to Mana
-  `,
-
-  Treachery: `
-  5% Chance To Cast Level 15 Fade When Struck
-  25% Chance To Cast level 15 Venom On Striking
-  +2 To Assassin Skills
-  +45% Increased Attack Speed
-  +20% Faster Hit Recovery
-  Cold Resist +30%
-  50% Extra Gold From Monsters
-  `,
-
-  /* Patch 2.4 - alpha sort maybe later, keep here for now easier to find */
-  Plague: `
-  20% Chance to Cast level 12 Lower Resist when struck
-  25% Chance to Cast level 15 Poison Nova on striking
-  Level 13-17 Cleansing Aura When Equipped (varies)
-  +1-2 All Skills
-  +20% Increased Attack Speed
-  +220-320% Enhanced Damage (varies)
-  -23% To Enemy Poison Resistance
-  0.3% (0-29.7) Deadly Strike (Based on Character Level)
-  +25% Chance of Open Wounds
-  Freezes Target +3
-  `,
-
-  Pattern: `
-  +30% Faster Block Rate
-  +40-80% Enhanced Damage (varies)
-  10% Bonus to Attack Rating
-  Adds 17-62 Fire Damage
-  Adds 1-50 Lightning Damage
-  Adds 3-14 Cold Damage
-  +75 Poison Damage Over 5 Seconds
-  +6 to Strength
-  +6 to Dexterity
-  All Resistances +15
-  `,
-
-  "Unbending Will": `
-  18% Chance to cast Level 18 Taunt on striking
-  +3 To Combat Skills (Barbarian Only)
-  +20-30% Increased Attack Speed (varies)
-  +300-350% Enhanced Damage (varies)
-  +9 To Maximum Damage
-  +50 To Attack Rating
-  +75% Damage to Undead
-  +50 Attack Rating Against Undead
-  8-10% Life Stolen Per Hit (varies)
-  Prevent Monster Heal
-  +10 To Strength
-  +10 To Vitality
-  Damage Reduced By 8
-  +1 Light Radius
-  Requirements -20%
-  `,
-
-  Wisdom: `
-  +33% Piercing Attack
-  +15-25% Bonus to Attack Rating (varies)
-  4-8% Mana Stolen Per Hit (varies)
-  +30% Enhanced Defense
-  +10 Energy
-  15% Slower Stamina Drain
-  Cannot Be Frozen
-  +5 Mana After Each Kill
-  15% Damage Taken Goes to Mana
-  `,
-
-  Obsession: `
-  Indestructible
-  24% Chance to cast level 10 Weaken when struck
-  +4 To All Skills
-  +65% Faster Cast Rate
-  +60% Faster Hit Recovery
-  Knockback
-  +10 To Vitality
-  +10 To Energy
-  Increase Maximum Life 15-25% (varies)
-  Regenerate Mana 15-30% (varies)
-  All Resistances +60-70 (varies)
-  75% Extra Gold from Monsters
-  30% Better Chance of Getting Magic Items
-  `,
-
-  "Flickering Flame": `
-  Level 4-8 Resist Fire Aura When Equipped (varies)
-  +3 To Fire Skills
-  -10-15% to Enemy Fire Resistance (varies)
-  +30% Enhanced Defense
-  +30 Defense Vs. Missile
-  +50-75 To Mana (varies)
-  Half Freeze Duration
-  +5% To Maximum Fire Resist
-  Poison Length Reduced by 50%
-  `,
-
-  Mist: `
-  Level 8-12 Concentration Aura When Equipped (varies)
-  +3 To All Skills
-  20% Increased Attack Speed
-  +100% Piercing Attack
-  +325-375% Enhanced Damage (varies)
-  +9 To Maximum Damage
-  20% Bonus to Attack Rating
-  Adds 3-14 Cold Damage
-  Freeze Target +3
-  +24 Vitality
-  All Resistances +40
-  `,
-
-  /* Patch 2.6 */
-  Bulwark: `
-  +20% Faster Hit Recovery
-  +4-6% Life stolen per hit
-  +75-100% Enhanced Defense
-  +10 to Vitality
-  Increase Maximum Life 5%
-  Replenish Life +30
-  Damage Reduced by 7
-  Physical Damage Received Reduced by 10-15%
-  `,
-
-  Cure: `
-  Level 1 Cleansing Aura when Equipped
-  +20% Faster Hit Recovery
-  +75-100% Enhanced Defense
-  +10 to Vitality
-  Increase Maximum Life 5%
-  Poison Resist +40-60%
-  Poison Length Reduced by 50%
-  `,
-
-  Ground: `
-  +20% Faster Hit Recovery
-  +75-100% Enhanced Defense
-  +10 to Vitality
-  Increase Maximum Life 5%
-  Lightning Resist +40-60%
-  Lightning Absorb +10-15%
-  `,
-
-  Hearth: `
-  +20% Faster Hit Recovery
-  +75-100% Enhanced Defense
-  +10 to Vitality
-  Increase Maximum Life 5%
-  Cold Resist +40-60%
-  Cold Absorb +10-15%
-  Cannot be Frozen
-  `,
-
-  Temper: `
-  +20% Faster Hit Recovery
-  +75-100% Enhanced Defense
-  +10 to Vitality
-  Increase Maximum Life 5%
-  Fire Resist +40-60%
-  Fire Absorb +10-15%
-  `,
-
-  Hustle: `
-  #### Weapons
-  5% Chance to cast level 1 Burst of Speed on striking
-  Level 1 Fanaticism Aura
-  +30% Increased Attack Speed
-  +180-200% Enhanced Damage
-  +75% Damage to Undead
-  +50 to Attack Rating against Undead
-  +10 to Dexterity
-
-  #### Body Armors
-  +65% Faster Run/Walk
-  +40% Increased Attack Speed
-  +20% Faster Hit Recovery
-  +6 to Evade
-  +10 to Dexterity
-  50% Slower Stamina Drain
-  +All Resistances +10
-  `,
-
-  Mosaic: `
-  +50% chance for finishing moves to not consume charges
-  +2 to Martial Arts (Assassin only)
-  +20% Increased Attack Speed
-  +200-250% Enhanced Damage
-  +20% Bonus to Attack Rating
-  7% Life Steal
-  +8-15% to Cold Skill Damage
-  +8-15% to Lightning Skill Damage
-  +8-15% to Fire Skill Damage
-  Prevent Monster Heal
-  `,
-
-  Metamorphosis: `
-  100% Chance to cast level 1 Mark of the Wolf on striking
-  100% Chance to cast level 1 Mark of the Bear on striking
-  +5 to Shape Shifting Skills (Druid only)
-  +25% Chance of Crushing Blow
-  +50-80% Enhanced Defense
-  +10 to Strength
-  +10 to Vitality
-  All Resistances +10
-  Cannot be Frozen
-  `,
+  Malice:
+    "\n+[150-220]% Enhanced Damage\n+[50-50] to Attack Rating\n+5% Life stolen per Hit\n+30% of target Defense ignored\n+100% Chance to Open Wounds\n+5% of Damage Taken goes to Mana\nSocketed 3\n",
+  Shadow:
+    "\n+[50-75]% Enhanced Defense\n+25% Increased Movement Speed\n+25% Faster Cast Rate\n+[100-250] to Attack Rating\n+2 Mana per second\n+10% of target Defense ignored\n+10 to Dexterity\nPoison Skill Damage increased by 5%\nReplenish Mana 15%\n+50% Faster Hit Recovery\nSocketed 2\n",
+  "Divine Contemplation":
+    "\nDefense: [122-181]\nBlock Chance: 65\n+50% Enhanced Defense\nLightning Skill Damage increased by 5%\nPoison Skill Damage increased by 5%\nFire Skill Damage increased by 5%\n+10% of Damage Taken goes to Mana\n+[38-48]% to Arcane Resistance\n+[38-48]% to Cold Resistance\n+[38-48]% to Fire Resistance\n+[38-48]% to Poison Resistance\n+[38-48]% to Lightning Resistance\nSocketed [3-3]\n",
+  Lightforge:
+    "\nDefense: [70-123]\n+75% Enhanced Defense\n+10 to Energy\n+10 to Vitality\n+[25-35] to Mana\n+45% Defense vs Missiles\n+5 to Light Radius\n+30% of Damage Taken goes to Mana\nPhysical Damage Taken Reduced by [4-7]%\nMagic Damage Taken Reduced by [3-5]%\nSocketed 3\n",
+  Preacher:
+    "\n+[600-880]% Enhanced Damage\n+45% Faster Cast Rate\n+[280-350] to Attack Rating\n+[10-15] to Intelligence\n+[10-25] to All Attributes\nPoison Skill Damage increased by 5%\nFire Skill Damage increased by 5%\n+[4-20] Mana After each Kill\nPhysical Damage Taken Reduced by 7%\n+[31-50]% Increased Magic Find\nSocketed 4\n",
+  Scholar:
+    "\nDefense: 73\n+[1-1] to All Skills\n+17 to Energy\nLightning Skill Damage increased by 5%\n+3 Mana After each Kill\n+2 to Light Radius\nPhysical Damage Taken Reduced by 1%\nSocketed 2\n",
+  "Flesh Ripper":
+    "\nDefense: 126\n+[75-125]% Enhanced Defense\n+10% Increased Attack Speed\n+15% Increased Critical Strike Chance\n+7% Life stolen per Hit\n+5 to All Attributes\n+[25-35] to Life\n+[10-20]% to All Resistances\nSocketed [2-2]\n",
+  "Inner Fire":
+    "\n+[440-560]% Enhanced Damage\n+10% Increased Attack Speed\n+100 to Attack Rating\n+10 to Strength\nFire Skill Damage increased by 5%\n+[19-30] to Life\n+2 Mana After each Kill\nSocketed 4\n",
+  Skysong:
+    "\n+[650-880]% Enhanced Damage\n+3 to All Skills\n+[25-35]% Faster Cast Rate\n+10% Increased Attack Speed\n+[18-25] to Vitality\n+[18-38] to Arcane Skill Damage\nFire Skill Damage increased by 5%\n+[80-110] to Mana\n+55% Faster Hit Recovery\n+15% of Damage Taken goes to Mana\nPhysical Damage Taken Reduced by 7%\nSocketed 4\n",
+  Quickstep:
+    "\nDefense: 60\n+75% Enhanced Defense\n+[50-70]% Increased Movement Speed\n+[20-40]% Increased Attack Speed\n+7% Life stolen per Hit\nArcane Skill Damage increased by 5%\n+[30-50]% Defense vs Missiles\nSocketed 2\n",
+  Mystify:
+    "\nDefense: 240\n+[1-2] to All Skills\nCooldown Recovery Increased by 4%\n+1% Life stolen per Hit\n+15 to Vitality\nReplenish Life 10%\n+15% Defense vs Missiles\n+36% of Damage Returned to the Attacker\nSocketed 3\n",
+  "Thinking Cap":
+    "\nDefense: [120-61]\n+96% Enhanced Defense\n+[4-4] to Sentry Skills\n+10% Increased Attack Speed\n+10 to Vitality\n+10 to All Attributes\nCold Skill Damage increased by 12%\n+20% Faster Hit Recovery\n+55% to Cold Resistance\nCannot be Frozen\nSocketed 3\n",
+  Torment:
+    "\n+[2-2] to All Skills\n+[3-3] to Arcane Skills\n+20% Faster Cast Rate\n+10 to Vitality\nArcane Skill Damage increased by 5%\nReplenish Mana 26%\n+15 to Mana\nSocketed 2\n",
+  "Angul Auxana":
+    "\n+[100-125]% Enhanced Defense\n+1 to All Skills\n+[1-3] to Arcane Skills\n+15% Faster Cast Rate\nCooldown Recovery Increased by 4%\n+2 Mana per second\n+10 to Energy\n+8 to Vitality\nArcane Skill Damage increased by [10-15]%\n-[1-10]% to Enemy Arcane Resistance\nReplenish Mana 15%\nSocketed 3\n",
+  Astropos:
+    "\nDefense: 210\n+[100-125]% Enhanced Defense\n+1 to All Skills\n+[1-3] to Lightning Skills\n+15% Faster Cast Rate\nCooldown Recovery Increased by 4%\n+2 Mana per second\n+10 to Energy\nLightning Skill Damage increased by [10-15]%\n-[1-10]% to Enemy Lightning Resistance\nReplenish Mana 15%\nSocketed 3\n",
+  Brilliance:
+    "\n+1 to All Skills\n+30% Faster Cast Rate\n+[7-25] to Energy\n+10 to All Attributes\n+[75-225] to Mana\n+2 Mana After each Kill\nMana Increased by [5-10]%\nSocketed 2\n",
+  Freljord:
+    "\nDefense: [46-216]\n+[100-125]% Enhanced Defense\n+1 to All Skills\n+[1-3] to Cold Skills\n+15% Faster Cast Rate\nCooldown Recovery Increased by 4%\n+2 Mana per second\n+10 to Energy\nCold Skill Damage increased by [10-15]%\n-[1-10]% to Enemy Cold Resistance\nReplenish Mana 15%\nSocketed [3-3]\n",
+  Martyr:
+    "\n+[350-480]% Enhanced Damage\n+35% Increased Attack Speed\n+7% Life stolen per Hit\n+10 to Energy\n+[12-25] to All Attributes\nCold Skill Damage increased by 5%\n+[3-6] Mana After each Kill\nPhysical Damage Taken Reduced by [7-7]%\nSocketed 4\n",
+  Moltening:
+    "\n+370% Enhanced Defense\n+1 to All Skills\n+[1-3] to Fire Skills\n+15% Faster Cast Rate\nCooldown Recovery Increased by 4%\n+2 Mana per second\n+10 to Energy\nFire Skill Damage increased by 18%\n-5% to Enemy Fire Resistance\nReplenish Mana 15%\nSocketed 3\n",
+  Revelation:
+    "\n+150% Enhanced Defense\n+[4-4] to All Skills\n+50% Faster Cast Rate\nMana Costs decreased by 9%\n+10% of target Defense ignored\n+10 to Energy\n+10 to Vitality\n+25 to Mana\nPhysical Damage Taken Reduced by 7%\nSocketed 4\n",
+  Toxicarcus:
+    "\n+[100-125]% Enhanced Defense\n+1 to All Skills\n+[2-3] to Poison Skills\n+15% Faster Cast Rate\nCooldown Recovery Increased by 4%\n+2 Mana per second\n+10 to Energy\nPoison Skill Damage increased by 16%\n-4% to Enemy Poison Resistance\nReplenish Life 20%\nReplenish Mana 15%\nSocketed 3\n",
+  "Trapped Vessel":
+    "\n+[1-1] to All Skills\n+20 to Energy\nPoison Skill Damage increased by 29%\nReplenish Mana 25%\n+50 to Intelligence (Based on Level)\nSocketed 3\n",
+  Sleight:
+    "\n+[500-675]% Enhanced Damage\n+[18-38] to Flat Physical Damage\n+10 to Dexterity\n+[240-420] to Additive Lightning Damage\n+[240-420] to Additive Fire Damage\n+[240-420] to Additive Cold Damage\nReplenish Mana 50%\n+2 Mana After each Kill\n+10 to Light Radius\n+15% of Damage Taken goes to Mana\nPhysical Damage Taken Reduced by 7%\nSocketed 4\n",
+  Blitzkrieg:
+    "\n+[225-325]% Enhanced Defense\n+[10-20]% Increased Movement Speed\n+[20-40]% Increased Attack Speed\n+[4-8]% Increased Critical Strike Chance\n+15% Chance for a Deadly Blow\n+10 to Strength\n+10 to Dexterity\n+[12-26] to Arcane Skill Damage\n+50% Enhanced Damage\nSocketed 3\n",
+  Brutality:
+    "\n+[275-350]% Enhanced Damage\n+2 to Physical Skills\n+20% Increased Attack Speed\n+20% Chance for a Deadly Blow\n+7% Life stolen per Hit\n+10 to Strength\nMagic Skill Damage increased by [8-15]%\n+225 to Life\nSocketed 4\n",
+  Conquest:
+    "\n+[550-660]% Enhanced Damage\n+20% Increased Attack Rating\n+[10-61] to Dexterity\n+25 to Intelligence\n+[8-15] to All Attributes\n+223 to Additive Arcane Damage\n+[158-200] to Additive Fire Damage\n+[28-34]% of Damage Taken goes to Mana\nPhysical Damage Taken Reduced by 7%\n+20% to All Resistances\n+25% Extra Gold Dropped From Kills\nSocketed 4\n",
+  "Gladstone Goose's Jacket":
+    "\nDefense: [200-240]\n+[200-260]% Enhanced Defense\nMana Costs decreased by 3%\n+[8-30] to Strength\n+10% Faster Hit Recovery\n-3 to Light Radius\n+5% of Damage Taken goes to Mana\nPhysical Damage Taken Reduced by 3%\n+52% to All Resistances\n+[15-50]% Increased Magic Find\n+[1-5]% Increased Experience Gain\nSocketed 4\n",
+  Mayhem:
+    "\n+20% Enhanced Damage\n+[150-200]% Enhanced Defense\n+10% Increased Attack Speed\n+15% Chance for a Crushing Blow\n+33% Chance to Open Wounds\n+[4-6] to Vitality\n+[110-140] to Additive Cold Damage\nCold Skill Damage increased by 5%\n+40% Faster Hit Recovery\n+20% to All Resistances\n+45% to Cold Resistance\n+15% to Fire Resistance\n+15% to Poison Resistance\n+15% to Lightning Resistance\nSocketed 3\n",
+  "Shroud of Elements":
+    "\n+[250-290]% Enhanced Defense\n+10% Increased Attack Speed\nMana Costs decreased by 3%\n+[15-20] to Strength\n+20 to Energy\n+[15-20] to Vitality\n+60% Faster Hit Recovery\n+300% Defense vs Missiles\n+35% to All Resistances\nSocketed 4\n",
+  Ghost:
+    "\nDefense: 63\n+[100-150]% Enhanced Defense\n+[1-2] to All Skills\n+57% Increased Movement Speed\n+[30-50]% Defense vs Missiles\nPhysical Damage Taken Reduced by 7%\nMagic Damage Taken Reduced by 3%\nMovement Phasing\nSocketed [2-2]\n",
+  Shelter:
+    "\nDefense: [230-97]\n+65% Increased Chance of Blocking\n+137% Enhanced Defense\nBlock Chance: 20\n+40 to Dexterity\n+7 to Intelligence\n+20% Faster Hit Recovery\n+250% Defense vs Missiles\nMagic Damage Taken Reduced by 14%\n+[53-70]% to All Resistances\nSocketed 3\n",
+  Sonicstep:
+    "\n+[35-50]% Enhanced Damage\n+[220-300]% Enhanced Defense\n+1 to All Skills\n+[35-50]% Increased Movement Speed\n+49% Increased Attack Speed\n+4% Mana stolen per Hit\n+15% of Damage Taken goes to Mana\nMagic Damage Taken Reduced by 3%\n+15% to All Resistances\nSocketed 3\n",
+  "Arcane Bastion":
+    "\n+[150-200]% Enhanced Defense\n+[2-3] to All Skills\n+15% Increased Attack Rating\n+10 to Energy\nLightning Skill Damage increased by 5%\nMagic Skill Damage increased by [8-20]%\n+[25-40] to Life\n+[150-200]% Defense vs Missiles\nPhysical Damage Taken Reduced by 7%\n+[10-30]% to All Resistances\nSocketed 4\n",
+  Ascendancy:
+    "\n+[550-680]% Enhanced Damage\n+15% Increased Attack Rating\n+[5-15] to Dexterity\n+10 to Vitality\n+[1220-1440] to Additive Arcane Damage\nArcane Skill Damage increased by [25-40]%\nMana Increased by 8%\n+15% Increased Magic Find\nSocketed 3\n",
+  Mjölner:
+    "\n+[620-770]% Enhanced Damage\n+50% Increased Attack Speed\n+15% Increased Attack Rating\n+10 to Strength\nLightning Skill Damage increased by [15-30]%\n-[6-15]% to Enemy Lightning Resistance\nAttacks can hit multiple enemies\nSocketed 4\n",
+  "Delirium Tremens":
+    "\nDefense: [314-641]\n+[225-325]% Enhanced Defense\n+[5-8] to All Skills\n+[14-15]% Mana stolen per Hit\nSocketed 2\n",
+  Epilogue:
+    "\n+[660-720]% Enhanced Damage\n+15% Increased Attack Rating\n+15 to Attack Rating\n+[18-38] to Flat Physical Damage\n+7% Life stolen per Hit\n+7% Mana stolen per Hit\nSocketed [3-3]\n",
+  Paradox:
+    "\n+440% Enhanced Defense\n+[2-2] to All Skills\n+47% Increased Movement Speed\n+7% Mana stolen per Hit\nMagic Skill Damage increased by [18-15]%\nReplenish Life 20%\nReplenish Mana 20%\nPhysical Damage Taken Reduced by 10%\n+15% Increased Magic Find\nSocketed 2\n",
+  Windstride:
+    "\n+[550-725]% Enhanced Damage\n+[2-4] to All Skills\nAttack Range Increased by [15-25]%\n+[30-60]% Increased Attack Speed\nCooldown Recovery Increased by 4%\n+23% Mana stolen per Hit\nArcane Skill Damage increased by 5%\n+2 Mana After each Kill\n+75% to All Resistances\n+15% Increased Magic Find\nSocketed 6\n",
+  "Aurora's Might":
+    "\n+[430-550]% Enhanced Damage\n+7% Life stolen per Hit\n+[30-40]% of target Defense ignored\n+10 to Dexterity\n+14 to Energy\n+[250-320] to Additive Arcane Damage\n+[230-280] to Additive Cold Damage\nAttack Damage increased by 20%\n+25% Faster Hit Recovery\n+15% Extra Gold Dropped From Kills\nSocketed 3\n",
+  Havoc:
+    "\nDefense: [308-871]\n+[220-260]% Enhanced Defense\n+3 to All Skills\n+[25-50]% Increased Chance of Blocking\n+7% Mana stolen per Hit\nAttack Damage increased by 20%\nArcane Skill Damage increased by 5%\nPhysical Damage Taken Reduced by 5%\n+5% to Maximum Cold Resist\n+5% to Maximum Fire Resist\n+15% Increased Magic Find\nSocketed 4\n",
+  Kogarasumaru:
+    "\n+[420-570]% Enhanced Damage\n+1 to All Skills\n+20% Chance for a Crushing Blow\n+15% Increased Attack Rating\n+5% Life stolen per Hit\n+7% Mana stolen per Hit\nAttack Damage increased by 20%\n+20% to All Resistances\nSocketed 5\n",
+  Valkyrie:
+    "\n+645% Enhanced Damage\n+[2-4] to All Skills\n+500 to Attack Rating\n+40% of target Defense ignored\n+[7-25] to Strength\nAttack Damage increased by 20%\n+[30-40]% to All Resistances\n+20% Extra Gold Dropped From Kills\nSocketed 3\n",
+  "Will of Thanos":
+    "\n+[425-590]% Enhanced Damage\n+1 to All Skills\n+40% Increased Attack Speed\n+7% Life stolen per Hit\n+10 to Intelligence\nAttack Damage increased by 20%\nFire Skill Damage increased by 5%\nReplenish Life [8-16]%\nMagic Damage Taken Reduced by 3%\n+15% Increased Magic Find\nAttacks can hit multiple enemies\nSocketed 5\n",
+  Chimera:
+    "\n+50% Enhanced Damage\n+[205-385]% Enhanced Defense\n+[1-2] to All Skills\n+25% Increased Attack Speed\n+10% Chance for a Deadly Blow\n+5% Increased Attack Rating\n+[10-15] to Strength\n+[10-15] to Intelligence\n+15 to All Attributes\nAttack Damage increased by 20%\n+7% to All Resistances\nSocketed 4\n",
+  "Big Joe":
+    "\n+[680-740]% Enhanced Damage\n+[30-40]% Increased Attack Speed\nCooldown Recovery Increased by 4%\n+50% Chance for a Deadly Blow\n+40% Increased Attack Rating\n+10 to Strength\n+10 to Vitality\n+[420-460] to Additive Fire Damage\nPoison Skill Damage increased by 5%\n+15% Defense vs Missiles\nAttacks can hit multiple enemies\nSocketed 6\n",
+  Fortress:
+    "\nDefense: [230-2185]\n+250% Enhanced Damage\n+850% Enhanced Defense\n+25% Faster Cast Rate\n+25% Chance for a Deadly Blow\n+50 to Attack Rating\nArcane Skill Damage increased by 5%\nDamage Taken Reduced by [10-20]\nPhysical Damage Taken Reduced by 7%\n+150 to Life (Based on Level)\n+[25-40]% to All Resistances\nSocketed [4-4]\n",
+  Bristle:
+    "\nDefense: 525\n+10% of target Defense ignored\nAttack Damage increased by 20%\nPoison Skill Damage increased by [25-50]%\nFire Skill Damage increased by 5%\nReplenish Mana 15%\nDamage Taken Reduced by [10-100]\n+50% Faster Hit Recovery\n+15 Life After each Kill\n+30% to Fire Resistance\n+100% to Poison Resistance\nSocketed 4\n",
+  Celestus:
+    "\n+[3-5] to Arcane Skills\nCooldown Recovery Increased by [15-25]%\n+6 Mana per second\n+20 to Intelligence\n+[18-38] to Arcane Skill Damage\nMana Increased by 25%\n+350 to Life\n+[20-40]% to Arcane Resistance\n+26% to Fire Resistance\n+37% to Lightning Resistance\nSocketed 2\n",
+  Curse:
+    "\nDefense: [8-771]\n+[225-325]% Enhanced Defense\n+[4-6] to Random Skill Element\nMagic Skill Damage increased by [20-40]%\nMana Increased by 10%\nMagic Damage Taken Reduced by 7%\n+[15-10]% to All Resistances\nSocketed 3\n",
+  Etherwalk:
+    "\nDefense: [57-159]\n+[220-300]% Enhanced Defense\n+[1-2] to All Skills\n+[2-3] to Random Skill Element\n+[20-30]% Increased Movement Speed\nMana Costs decreased by 3%\n-[3-10]% to All Enemy Resistances\nMagic Skill Damage increased by [15-30]%\nMana Increased by 10%\n+15% of Damage Taken goes to Mana\nSocketed [3-3]\n",
+  "Flowing Sands":
+    "\n+[3-4] to All Skills\nCooldown Recovery Increased by 50%\nMana Costs decreased by 3%\n+7% Mana stolen per Hit\nArcane Skill Damage increased by 5%\n+2 Mana After each Kill\nMana Increased by 10%\nSocketed [6-6]\n",
+  Ravager:
+    "\n+[430-570]% Enhanced Damage\n+20% Increased Attack Speed\n+33% Chance for a Crushing Blow\n+15% Increased Attack Rating\n+25% of target Defense ignored\n+50% Chance to Open Wounds\n+[8-30] to Strength\nMagic Damage Taken Reduced by 3%\n+7% to All Resistances\n+25% Extra Gold Dropped From Kills\nAttacks can hit multiple enemies\nSocketed 4\n",
+  Virulence:
+    "\n+1 to All Skills\n+[4-6] Mana per second\n+[15-30] to Energy\n+[18-38] to Poison Skill Damage\nPoison Skill Damage increased by [15-35]%\n-20% to Enemy Poison Resistance\nReplenish Mana 15%\nMana Increased by 25%\nPhysical Damage Taken Reduced by 7%\nSocketed 3\n",
+  Arcanum:
+    "\n+[760-940]% Enhanced Damage\n+[2-4] to All Skills\nAttack Range Increased by 15%\n+30% Increased Attack Speed\n+8% Chance for a Crushing Blow\n+15% Increased Attack Rating\n+10 to Energy\n+[7-25] to Intelligence\nMana Increased by 10%\nPhysical Damage Taken Reduced by 7%\n+15% Increased Magic Find\nSocketed 6\n",
+  Carnage:
+    "\n+[780-940]% Enhanced Damage\nMana Costs decreased by 3%\n+38% Chance for a Crushing Blow\n+250 to Attack Rating\n+10 to Energy\n+[8-15] to All Attributes\n+[458-300] to Additive Arcane Damage\n+[460-420] to Additive Lightning Damage\nMagic Damage Taken Reduced by 7%\nSocketed 4\n",
+  Catastrophe:
+    "\nMana Costs decreased by 3%\n+10% Chance for a Crushing Blow\n+24 to Energy\nFire Skill Damage increased by [30-50]%\n+12 Mana After each Kill\n+15 to Mana\n+20% to All Resistances\n+[20-40]% Increased Magic Find\nSocketed 5\n",
+  Crushfleet:
+    "\nDefense: [209-641]\n+226% Enhanced Defense\n+[1-3] to All Skills\n+[2-3] to Physical Skills\n+59% Increased Movement Speed\n+25% Chance for a Deadly Blow\n+[4-14]% Chance for a Crushing Blow\n+[7-15]% Mana stolen per Hit\n+25% of target Defense ignored\n+[123-150]% Faster Hit Recovery\nSocketed 3\n",
+  Force:
+    "\nDefense: [121-384]\n+75% Enhanced Defense\n+2 to All Skills\n+8% Chance for a Crushing Blow\n+8% Life stolen per Hit\n+30 to Strength\nArcane Skill Damage increased by 5%\nReplenish Life 7%\nPhysical Damage Taken Reduced by 8%\n+85% to All Resistances\n+30% Increased Magic Find\nSocketed [4-4]\n",
+  Grief:
+    "\n+[600-720]% Enhanced Damage\n+[2-3] to Poison Skills\n+[18-25]% Increased Attack Speed\n+25% Chance for a Deadly Blow\n+8% Chance for a Crushing Blow\n+5% of target Defense ignored\nExtra Damage to Poisoned Monsters [20-30]%\n-[20-25]% to Enemy Poison Resistance\n+2 Mana After each Kill\nMagic Damage Taken Reduced by 3%\nPoisoned Tick Frequency increased by +[10-20]%\nSocketed 5\n",
+  Atonement:
+    "\n+550% Enhanced Damage\n+25% Chance for a Deadly Blow\n+8% Chance for a Crushing Blow\n+7% Mana stolen per Hit\n+30% of target Defense ignored\n+[8-30] to Strength\n+10 to Dexterity\n+[1150-1250] to Additive Arcane Damage\nLife Increased by 10%\nSocketed 5\n",
+  "Crematorium's Pledge":
+    "\nDefense: [410-1911]\nBlock Chance: 50\n+50% Enhanced Defense\n+[1-2] to All Skills\n+8% Chance for a Crushing Blow\n+7% Mana stolen per Hit\nExtra Damage to Burning Monsters [35-60]%\nFire Skill Damage increased by [30-50]%\n-[22-30]% to Enemy Fire Resistance\n+[245-260] to Mana\nLife Increased by 10%\nMana Increased by 20%\n+5% Fire Damage Absorbed\n+20% to All Resistances\n+71% to Fire Resistance\nSocketed 5\n",
+  "Deus Ex Machina":
+    "\n+[760-860]% Enhanced Damage\n+[3-4] to All Skills\n+[16-30] to All Attributes\nAttack Damage increased by 20%\n+2 Mana After each Kill\nLife Increased by 10%\nSocketed 3\n",
+  Divinity:
+    "\n+3 to All Skills\n+40% Faster Cast Rate\nMana Costs decreased by 3%\n+[18-38] to Flat Physical Damage\n+7% Mana stolen per Hit\n+10 to Dexterity\nReplenish Life 20%\nLife Increased by 10%\nMana Increased by 15%\n+[20-30]% to All Resistances\nSocketed 4\n",
+  Harvester:
+    "\n+[550-660]% Enhanced Damage\n+[35-50]% Increased Attack Speed\n+[18-38] to Flat Physical Damage\n+7% Mana stolen per Hit\n+45% of target Defense ignored\n+20% Chance to Open Wounds\n-[20-25]% to Enemy Fire Resistance\nLife Increased by 10%\nMana Increased by 10%\nPhysical Damage Taken Reduced by 7%\nAttacks can hit multiple enemies\nSocketed 5\n",
+  Judge:
+    "\n+[520-670]% Enhanced Damage\n+30% Increased Attack Speed\n+12% Life stolen per Hit\n+30% of target Defense ignored\n+10 to Strength\n+[150-200] to Additive Arcane Damage\n+[150-200] to Additive Lightning Damage\n+[150-200] to Additive Fire Damage\n+[150-200] to Additive Cold Damage\nAttack Damage increased by 20%\nLightning Skill Damage increased by 5%\nLife Increased by 10%\nAttacks can hit multiple enemies\nSocketed 4\n",
+  Mirage:
+    "\nDefense: [84-84]\n+65% Increased Chance of Blocking\n+82% Enhanced Damage\n+[18-38] to Fire Skill Damage\n+[25-25]% Chance for a Deadly Blow\n+[1-1]% Mana stolen per Hit\n-[-21--21]% to Enemy Fire Resistance\n+[191-191] to Life\n+[369-400]% Defense vs Missiles\nLife Increased by [10-10]%\n+[10-10]% to Maximum Fire Resist\n+[5-5]% to Maximum Lightning Resist\nSocketed [4-4]\n",
+  Potency:
+    "\n+[640-820]% Enhanced Damage\n+30% Increased Attack Speed\n+25% Chance for a Deadly Blow\n+7% Life stolen per Hit\nCold Skill Damage increased by [35-45]%\n-50% to Enemy Cold Resistance\nLife Increased by 10%\nSocketed 4\n",
+  Rainbow:
+    "\n+30% Enhanced Defense\nMana Costs decreased by 3%\n+10 to Vitality\n+[20-30]% Faster Hit Recovery\nLife Increased by [13-16]%\n+65 to Mana (Based on Level)\n+[5-20]% to All Resistances\n+[12-25]% Increased Magic Find\nSocketed 3\n",
+  "Shroud of Enigma":
+    "\n+3 to All Skills\n+58% Increased Movement Speed\n+8% Chance for a Crushing Blow\n+8 to Armor\n+19 Life After each Kill\nLife Increased by 17%\n+15% of Damage Taken goes to Mana\nPhysical Damage Taken Reduced by 7%\n+75 to Strength (Based on Level)\n+50 to Vitality (Based on Level)\n+[34-34]% Increased Magic Find\nSocketed 3\n",
+  "True Aim":
+    "\n+[760-940]% Enhanced Damage\n+25% Chance for a Deadly Blow\n+45% Increased Attack Rating\n+[18-38] to Flat Physical Damage\nLife Increased by 10%\nMagic Damage Taken Reduced by 3%\nSocketed 4\n",
+  Legionnaire:
+    "\nDefense: [60-109]\n+[75-125]% Enhanced Defense\n+[3-6] to Physical Skills\n+25% Chance for a Deadly Blow\n+15% Increased Attack Rating\n+8% Life stolen per Hit\n+8% Mana stolen per Hit\n+[30-40] to Strength\nAttack Damage increased by [35-60]%\nSocketed 3\n",
+  Nirvana:
+    "\nDefense: [174-178]\n+123% Enhanced Defense\n+[2-4] to All Skills\n+[37-40] to Energy\n+[10-15] to Intelligence\nMagic Skill Damage increased by 15%\nReplenish Mana 40%\n+20 to Mana\nCannot be Frozen\nSocketed 3\n",
+  Perdition:
+    "\n+[530-670]% Enhanced Damage\n+45% Increased Attack Speed\nCooldown Recovery Increased by 4%\n+25% Chance for a Deadly Blow\n+25% Chance to Open Wounds\nAttack Damage increased by 20%\n-[40-60]% to Enemy Cold Resistance\n+20% to All Resistances\nCannot be Frozen\nSocketed 5\n",
+  Sovereignty:
+    "\n+[3-5] to All Skills\nMana Costs decreased by 3%\n+50 to Attack Rating\n+[5-15] to Energy\nArcane Skill Damage increased by [25-45]%\n-[15-30]% to Enemy Arcane Resistance\nCannot be Frozen\nSocketed 4\n",
+  "Breath of the Damned":
+    "\n+[650-800]% Enhanced Damage\n+[2-4] to All Skills\n+1 to Burst of Venom\n+20% Increased Attack Speed\nCooldown Recovery Increased by 4%\n+50 to Attack Rating\n+[8-15]% Life stolen per Hit\n+7% Mana stolen per Hit\n+5% of target Defense ignored\n+[40-60] to All Attributes\nMagic Skill Damage increased by 8%\nSocketed 6\n",
+  "Bubonic Plague's Pledge":
+    "\nDefense: [432-961]\nBlock Chance: 50\n+350% Enhanced Defense\n+[1-2] to All Skills\n+30% Increased Attack Rating\nExtra Damage to Poisoned Monsters [35-60]%\n+[8-30] to Intelligence\nPoison Skill Damage increased by [22-50]%\n-[22-30]% to Enemy Poison Resistance\nMagic Skill Damage increased by 10%\nLife Increased by 20%\n+5% Poison Damage Absorbed\n+20% to All Resistances\n+64% to Poison Resistance\nSocketed 5\n",
+  Disaster:
+    "\n+[380-475]% Enhanced Damage\n+[5-8] to All Skills (Redneck)\n+[7-12] to Flat Tire (Redneck)\n+[3-6] to Hillybilly Rage (Redneck)\n+[40-80]% Faster Cast Rate\nCooldown Recovery Increased by 35%\nExtra Damage to Burning Monsters [55-80]%\n+[25-25] to All Attributes\nMagic Skill Damage increased by 10%\nLife Increased by 20%\nMana Increased by 10%\n+[10-30]% to All Resistances\n+15% Increased Magic Find\nAttacks can hit multiple enemies\nSocketed [6-6]\n",
+  Hydrangea:
+    "\n+[2-3] to All Skills (Amazon)\n+8 to Poison Skills (Amazon)\n+[20-30]% Increased Movement Speed\n+[4-8] Mana per second\n+35 to Energy\n+25 to Vitality\n+[2350-2700] to Additive Poison Damage\nPoison Skill Damage increased by 20%\n-35% to Enemy Poison Resistance\nMagic Skill Damage increased by 20%\n+[30-60]% to Poison Resistance\nSocketed 3\n",
+  Justice:
+    "\nDefense: [80-374]\n+[350-400]% Enhanced Defense\n+[2-4] to All Skills\nBlock Chance: 15\n+[20-40]% Increased Movement Speed\n+35 to Energy\n+40 to Armor\n+20 to All Attributes\nMagic Skill Damage increased by 10%\nMana Increased by 30%\nMagic Damage Taken Reduced by [8-15]%\n+[40-80]% to All Resistances\nCannot be Frozen\nSocketed 3\n",
+  "Lost Dimension":
+    "\nDefense: 89\n+350% Enhanced Defense\n+[1-3] to All Skills\nBlock Chance: 15\n+[1-15]% Faster Cast Rate\n+30 to Armor\nMagic Skill Damage increased by 8%\nLife Increased by 20%\nMana Increased by 20%\n+20% to All Resistances\n+30% Increased Magic Find\nSocketed 5\n",
+  "Ninja Tabi":
+    "\nDefense: 153\n+323% Enhanced Defense\n+[2-3] to All Skills\n+45% Increased Movement Speed\n+88% Increased Jumping Power\n+8% Chance for a Crushing Blow\n+5 to Dexterity\nMagic Skill Damage increased by 10%\nPhysical Damage Taken Reduced by 3%\nMagic Damage Taken Reduced by 3%\n+1 to Double Jump\nCannot be Frozen\nSocketed 2\n",
+  "Crown of the Antichrist":
+    "\n+[425-625]% Enhanced Defense\n+3 to All Skills\n+35 to Random Skill\n+1 to Projectile Speed\n-20% to All Enemy Resistances\nMagic Skill Damage increased by 8%\nMagic Damage Taken Reduced by [1-8]%\n+[25-30]% to All Resistances\nUnbreakable\nSocketed 3\n",
+  "Babylon's Fall":
+    "\n+[400-425]% Enhanced Defense\n+4 to All Skills\nPotion Cooldown Recovery Increased by 15%\n+8% Chance for a Crushing Blow\n+1 to Projectile Speed\nReplenish Life [250-300]%\nReplenish Mana [250-300]%\nDamage Taken Reduced by [50-350]\nAll Damage Taken Reduced by 15%\n+100% Magic Find (Based on Level)\n+2% to Maximum All Resists\n+[15-25]% Extra Gold Dropped From Kills\n+[150-200]% Increased Magic Find\nUnbreakable\nSocketed 4\n",
+  Colossus:
+    "\n+[550-600]% Enhanced Defense\n+[3-4] to All Skills\n+1 to Projectile Speed\n+[40-50] to Vitality\nLife Increased by [15-50]%\n+[1000-1500]% of Damage Returned to the Attacker\nAll Damage Taken Reduced by 6%\n+50% to All Resistances\nCannot be Frozen\nUnbreakable\nSocketed 5\n",
+  "Flowing Agony":
+    "\n+[320-400]% Enhanced Defense\n+[2-4] to All Skills\n+10 to Random Skill\n+95% Increased Movement Speed\n+[42-50]% Faster Cast Rate\n+1 to Projectile Speed\n+[7-25] to Dexterity\n-3% to All Enemy Resistances\nMagic Skill Damage increased by [42-50]%\nAll Damage Taken Reduced by 3%\nUnbreakable\nSocketed 3\n",
+  Feral:
+    "\n+[1000-1150]% Enhanced Damage\n+4 to All Skills\n+4 to Physical Skills\n+30% Increased Movement Speed\n+[45-50]% Increased Attack Speed\n+15% Increased Critical Strike Chance\n+50% Increased Critical Strike Damage\n+25% Chance for a Deadly Blow\n+8% Chance for a Crushing Blow\n+25% Chance to Open Wounds\nExtra Damage to Bleeding Monsters [85-100]%\n-6% to All Enemy Resistances\nAttack Damage increased by 20%\nUnbreakable\nSocketed 4\n",
+  Grimwalkers:
+    "\n+[300-375]% Enhanced Defense\n+4 to All Skills\n+74% Increased Movement Speed\nSkill Movement Diminish decreased by [40-80]%\n+1 to Projectile Speed\n+[30-40] to All Attributes\n-[10-15]% to All Enemy Resistances\nMagic Skill Damage increased by [30-40]%\n+[200-400] to Life\n+25 Mana After each Kill\nMana Increased by 10%\n+2% to Maximum All Resists\nUnbreakable\nSocketed 4\n",
+  Violence:
+    "\nDefense: 61\n+[300-375]% Enhanced Defense\n+[2-3] to All Skills\n+[2-3] to Physical Skills\n+56% Increased Movement Speed\n+25% Increased Attack Speed\n+[35-45]% Chance for a Deadly Blow\n+8% Chance for a Crushing Blow\n+[7-12]% Mana stolen per Hit\nExtra Damage to Bleeding Monsters [15-20]%\n+1 to Projectile Speed\nAll Damage Taken Reduced by 3%\nMovement Phasing\nUnbreakable\nSocketed 4\n",
 };
 
 export default runewordsDesc;
